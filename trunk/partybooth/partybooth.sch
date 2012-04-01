@@ -55,7 +55,7 @@
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="no" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
@@ -13714,7 +13714,7 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="IC2" library="linear" deviceset="78*" device="Z" technology="L05"/>
 <part name="C2" library="rcl" deviceset="CPOL-EU" device="B45181B" value="100u"/>
-<part name="C3" library="rcl" deviceset="CPOL-EU" device="B45181B" value="2.2u"/>
+<part name="C3" library="rcl" deviceset="CPOL-EU" device="B45181B" value="10u"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
@@ -13724,8 +13724,8 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <part name="R4" library="rcl" deviceset="R-EU_" device="0204/7" value="10k"/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="0204/7" value="100"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="0204/7" value="100"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="0204/7" value="220"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="0204/7" value="220"/>
 <part name="J3" library="con-jack" deviceset="JACK-PLUG" device="0" value="12V"/>
 <part name="P+9" library="supply1" deviceset="+12V" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
@@ -13736,13 +13736,25 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 </plain>
 <instances>
 <instance part="SG1" gate="G$1" x="58.42" y="96.52" rot="R270"/>
-<instance part="T1" gate="G1" x="53.34" y="78.74"/>
-<instance part="T2" gate="G1" x="15.24" y="78.74"/>
+<instance part="T1" gate="G1" x="53.34" y="78.74" smashed="yes">
+<attribute name="NAME" x="50.8" y="82.296" size="1.778" layer="95"/>
+<attribute name="VALUE" x="55.88" y="78.74" size="1.778" layer="96"/>
+</instance>
+<instance part="T2" gate="G1" x="15.24" y="78.74" smashed="yes">
+<attribute name="NAME" x="12.954" y="82.296" size="1.778" layer="95"/>
+<attribute name="VALUE" x="17.78" y="78.74" size="1.778" layer="96"/>
+</instance>
 <instance part="R1" gate="G$1" x="45.72" y="78.74"/>
 <instance part="GND1" gate="1" x="55.88" y="71.12"/>
 <instance part="P+1" gate="1" x="55.88" y="111.76"/>
-<instance part="D1" gate="G$1" x="48.26" y="96.52" rot="R90"/>
-<instance part="J1" gate="-1" x="15.24" y="101.6" rot="MR0"/>
+<instance part="D1" gate="G$1" x="48.26" y="96.52" smashed="yes" rot="R90">
+<attribute name="NAME" x="52.0954" y="94.742" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="45.4914" y="93.98" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="J1" gate="-1" x="15.24" y="101.6" smashed="yes" rot="MR0">
+<attribute name="NAME" x="12.7" y="100.838" size="1.524" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="13.462" y="102.997" size="1.778" layer="96" rot="MR0"/>
+</instance>
 <instance part="J1" gate="-2" x="15.24" y="99.06" rot="MR0"/>
 <instance part="P+2" gate="1" x="17.78" y="111.76"/>
 <instance part="R2" gate="G$1" x="7.62" y="78.74"/>
@@ -13752,7 +13764,10 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <instance part="GND3" gate="1" x="-15.24" y="33.02"/>
 <instance part="OK1" gate="A" x="38.1" y="45.72"/>
 <instance part="OK1" gate="B" x="38.1" y="30.48"/>
-<instance part="J2" gate="-1" x="-17.78" y="93.98" rot="MR0"/>
+<instance part="J2" gate="-1" x="-17.78" y="93.98" smashed="yes" rot="MR0">
+<attribute name="NAME" x="-20.32" y="93.218" size="1.524" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="-19.558" y="97.917" size="1.778" layer="96" rot="MR0"/>
+</instance>
 <instance part="J2" gate="-2" x="-17.78" y="96.52" rot="MR0"/>
 <instance part="SV1" gate="1" x="5.08" y="48.26" rot="R180"/>
 <instance part="P+4" gate="1" x="15.24" y="58.42"/>
@@ -14053,9 +14068,10 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="J2" gate="-2" pin="S"/>
-<wire x1="-15.24" y1="99.06" x2="-15.24" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="96.52" x2="-10.16" y2="96.52" width="0.1524" layer="91"/>
-<label x="-10.16" y="96.52" size="1.778" layer="95"/>
+<label x="-13.208" y="97.028" size="1.778" layer="95"/>
+<junction x="-15.24" y="96.52"/>
+<wire x1="-15.24" y1="96.52" x2="-15.24" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
