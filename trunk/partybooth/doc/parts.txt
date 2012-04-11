@@ -29,5 +29,3 @@ SV1      ICSP           MA03-2          MA03-2       con-lstb    1
 T1       2N3904         2N3904          TO92         transistor  1
 T2       2N3904         2N3904          TO92         transistor  1
 X1       1501_06        1501_06         1501_06      con-lumberg 1
-
-End
