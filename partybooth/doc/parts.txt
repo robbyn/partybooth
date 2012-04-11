@@ -1,0 +1,31 @@
+Partlist
+
+Exported from partybooth.sch at 4/10/12 3:43 PM
+
+EAGLE Version 6.1.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part     Value          Device          Package      Library     Sheet
+
+C1       0.1u           C-EU050-025X075 C050-025X075 rcl         1
+C2       100u           CPOL-EUB45181B  B45181B      rcl         1
+C3       10u            CPOL-EUB45181B  B45181B      rcl         1
+D1       1N4148         1N4148DO35-7    DO35-7       diode       1
+IC1      TINY13-20PU    TINY13-20PU     DIL08        atmel       1
+IC2      78L05Z         78L05Z          TO92         linear      1
+J1       Lamp           22-27-2021-02   6410-02      con-molex   1
+J2       Button         22-27-2021-02   6410-02      con-molex   1
+J3       12V            JACK-PLUG0      SPC4077      con-jack    1
+OK1                     ILD2            DIL08        optocoupler 1
+R1       430            R-EU_0204/7     0204/7       rcl         1
+R2       430            R-EU_0204/7     0204/7       rcl         1
+R3       10k            R-EU_0204/7     0204/7       rcl         1
+R4       10k            R-EU_0204/7     0204/7       rcl         1
+R5       220            R-EU_0204/7     0204/7       rcl         1
+R6       220            R-EU_0204/7     0204/7       rcl         1
+SG1                     F/CM12P         F/CM12P      buzzer      1
+SV1      ICSP           MA03-2          MA03-2       con-lstb    1
+T1       2N3904         2N3904          TO92         transistor  1
+T2       2N3904         2N3904          TO92         transistor  1
+X1       1501_06        1501_06         1501_06      con-lumberg 1
