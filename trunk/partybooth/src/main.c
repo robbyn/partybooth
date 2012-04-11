@@ -4,6 +4,7 @@
 #define LED PB0
 #define BTN PB1
 
+// main
 int main(void) {
     DDRB |= 1 << LED; // LED output
     DDRB &= ~(1 << BTN); // BTN input
