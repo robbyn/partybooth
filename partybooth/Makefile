@@ -59,7 +59,8 @@ build: .build-post
 .build-post: .build-impl
 	# convert ELF file to hex
 	avr-objcopy -j .text -j .data -O ihex ${CND_ARTIFACT_DIR_${CONF}}/partybooth.elf ${CND_ARTIFACT_DIR_${CONF}}/partybooth.hex
-	
+
+upload: clean build
 	# transfer the program to the device
 	sudo avrdude -c usbtiny -p attiny13 -U flash:w:${CND_ARTIFACT_DIR_${CONF}}/partybooth.hex
 	# NOTE: to avoid sudo requiring a password, add the following line to
