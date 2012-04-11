@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=Arduino-MacOSX
-CND_ARTIFACT_DIR_Debug=dist/Debug/Arduino-MacOSX
+CND_PLATFORM_Debug=Arduino-Linux-x86
+CND_ARTIFACT_DIR_Debug=dist/Debug/Arduino-Linux-x86
 CND_ARTIFACT_NAME_Debug=partybooth.elf
-CND_ARTIFACT_PATH_Debug=dist/Debug/Arduino-MacOSX/partybooth.elf
-CND_PACKAGE_DIR_Debug=dist/Debug/Arduino-MacOSX/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/Arduino-Linux-x86/partybooth.elf
+CND_PACKAGE_DIR_Debug=dist/Debug/Arduino-Linux-x86/package
 CND_PACKAGE_NAME_Debug=partybooth.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Arduino-MacOSX/package/partybooth.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Arduino-Linux-x86/package/partybooth.tar
 # Release configuration
-CND_PLATFORM_Release=Arduino-MacOSX
-CND_ARTIFACT_DIR_Release=dist/Release/Arduino-MacOSX
+CND_PLATFORM_Release=Arduino-Linux-x86
+CND_ARTIFACT_DIR_Release=dist/Release/Arduino-Linux-x86
 CND_ARTIFACT_NAME_Release=partybooth.elf
-CND_ARTIFACT_PATH_Release=dist/Release/Arduino-MacOSX/partybooth.elf
-CND_PACKAGE_DIR_Release=dist/Release/Arduino-MacOSX/package
+CND_ARTIFACT_PATH_Release=dist/Release/Arduino-Linux-x86/partybooth.elf
+CND_PACKAGE_DIR_Release=dist/Release/Arduino-Linux-x86/package
 CND_PACKAGE_NAME_Release=partybooth.tar
-CND_PACKAGE_PATH_Release=dist/Release/Arduino-MacOSX/package/partybooth.tar
+CND_PACKAGE_PATH_Release=dist/Release/Arduino-Linux-x86/package/partybooth.tar
 #
 # include compiler specific variables
 #

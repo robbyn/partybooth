@@ -1,11 +1,9 @@
-#define F_CPU 1200000UL
 #include <avr/io.h>
 
-#define LED PB0
-#define BTN PB1
+const uint8_t LED = PB0;
+const uint8_t BTN = PB1;
 
-// main
-int main(void) {
+int main() {
     DDRB |= 1 << LED; // LED output
     DDRB &= ~(1 << BTN); // BTN input
     while (1) {
@@ -15,5 +13,4 @@ int main(void) {
             PORTB |= 1 << LED;
         }
     }
-    return 0;
 }
