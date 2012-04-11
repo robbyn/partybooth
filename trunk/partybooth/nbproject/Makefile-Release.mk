@@ -21,7 +21,7 @@ FC=gfortran
 AS=avr-as
 
 # Macros
-CND_PLATFORM=Arduino-MacOSX
+CND_PLATFORM=Arduino-Linux-x86
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -59,12 +59,12 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -mmcu=attiny13 -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -mmcu=attiny13 -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/src/main.o: src/main.c 
+${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.c) -O2 -D__AVR_ATtiny13__ -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.c
+	$(COMPILE.cc) -O2 -D__AVR_ATtiny13__ -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 # Subprojects
 .build-subprojects:
