@@ -14,14 +14,14 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=avr-gcc
-CCC=avr-g++
-CXX=avr-g++
+CC=avr-gcc.exe
+CCC=avr-g++.exe
+CXX=avr-g++.exe
 FC=gfortran
-AS=avr-as
+AS=avr-as.exe
 
 # Macros
-CND_PLATFORM=Arduino-MacOSX
+CND_PLATFORM=Arduino-Windows
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -55,9 +55,9 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -mmcu=attiny13 -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
@@ -72,7 +72,7 @@ ${OBJECTDIR}/src/main.o: src/main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partybooth.elf.exe
 
 # Subprojects
 .clean-subprojects:
