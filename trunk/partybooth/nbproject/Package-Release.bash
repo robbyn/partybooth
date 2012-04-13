@@ -6,7 +6,7 @@
 
 # Macros
 TOP=`pwd`
-CND_PLATFORM=Arduino-Windows
+CND_PLATFORM=AVR-GCC-Windows
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
