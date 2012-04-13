@@ -17,7 +17,7 @@ flash: all
 	avrdude -c $(PROGRAMMER) -P $(PORT) -p $(DEVICE) -U flash:w:$(PROGRAM).hex:i
 	
 clean:
-	rm -f $(PROGRAM).hex $(PROGRAM).elf $(OBJECTS) $(PROGRAM).lst $(PROGRAM).map
+	rm -f $(PROGRAM).hex $(PROGRAM).elf *.o $(PROGRAM).lst $(PROGRAM).map
 
 # file targets:
 %.hex: %.elf
