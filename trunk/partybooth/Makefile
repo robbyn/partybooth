@@ -1,4 +1,5 @@
 PROGRAM		= partybooth
+VERSION		= 1.2
 DEVICE		= attiny13
 CLOCK		= 120000
 PROGRAMMER	= usbtiny
@@ -8,6 +9,9 @@ LDFLAGS	= -Wl,-Map=$(PROGRAM).map -Wl,--cref
 
 all:	$(PROGRAM).hex
 	avr-size -C --mcu=$(DEVICE) $(PROGRAM).elf
+
+$(PROGRAM)-$(VERSION)-src.zip:
+	zip 
 
 $(PROGRAM):	all	
 	
@@ -29,4 +33,4 @@ $(PROGRAM).elf: main.o
 disassemble:	$(PROGRAM).elf
 	avr-objdump -h -S $(PROGRAM).elf > $(PROGRAM).lst
 
-.PHONY :	all $(PROGRAM) flash fuse install clean disassemble
+.PHONY :	all $(PROGRAM) flash fuse install clean disassemble zipsrc
