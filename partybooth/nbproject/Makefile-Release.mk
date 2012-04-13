@@ -21,7 +21,7 @@ FC=gfortran
 AS=avr-as.exe
 
 # Macros
-CND_PLATFORM=Arduino-Windows
+CND_PLATFORM=AVR-GCC-Windows
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
