@@ -59,7 +59,7 @@
     <conf name="Release" type="1">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>AVR-GCC|WinAVR</compilerSet>
+        <compilerSet>avr-gcc|GNU</compilerSet>
       </toolsSet>
       <compileType>
         <cTool>
