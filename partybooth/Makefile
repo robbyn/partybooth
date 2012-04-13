@@ -10,8 +10,8 @@ LDFLAGS	= -Wl,-Map=$(PROGRAM).map -Wl,--cref
 all:	$(PROGRAM).hex
 	avr-size -C --mcu=$(DEVICE) $(PROGRAM).elf
 
-$(PROGRAM)-$(VERSION)-src.zip:
-	zip 
+zipsrc:	clean
+	 
 
 $(PROGRAM):	all	
 	
