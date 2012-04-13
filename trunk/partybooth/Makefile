@@ -59,6 +59,7 @@ build: .build-post
 .build-post: .build-impl
 	# convert ELF file to hex
 	avr-objcopy -j .text -j .data -O ihex ${CND_ARTIFACT_DIR_${CONF}}/partybooth.elf ${CND_ARTIFACT_DIR_${CONF}}/partybooth.hex
+	avr-objdump --full-contents --disassemble ${CND_ARTIFACT_DIR_${CONF}}/partybooth.elf > out.txt
 
 upload: clean build
 	# transfer the program to the device

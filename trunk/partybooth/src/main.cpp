@@ -1,7 +1,7 @@
 #include <avr/io.h>
 
-const uint8_t LED = PB0;
-const uint8_t BTN = PB1;
+static const uint8_t LED = PB0;
+static const uint8_t BTN = PB1;
 
 int main() {
     DDRB |= 1 << LED; // LED output
