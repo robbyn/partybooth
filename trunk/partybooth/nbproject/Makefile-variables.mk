@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=AVR-GCC-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/AVR-GCC-Windows
+CND_PLATFORM_Debug=AVR-GCC-MacOSX
+CND_ARTIFACT_DIR_Debug=dist/Debug/AVR-GCC-MacOSX
 CND_ARTIFACT_NAME_Debug=partybooth.elf
-CND_ARTIFACT_PATH_Debug=dist/Debug/AVR-GCC-Windows/partybooth.elf
-CND_PACKAGE_DIR_Debug=dist/Debug/AVR-GCC-Windows/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/AVR-GCC-MacOSX/partybooth.elf
+CND_PACKAGE_DIR_Debug=dist/Debug/AVR-GCC-MacOSX/package
 CND_PACKAGE_NAME_Debug=partybooth.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/AVR-GCC-Windows/package/partybooth.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/AVR-GCC-MacOSX/package/partybooth.tar
 # Release configuration
-CND_PLATFORM_Release=AVR-GCC-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/AVR-GCC-Windows
+CND_PLATFORM_Release=avr-gcc-MacOSX
+CND_ARTIFACT_DIR_Release=dist/Release/avr-gcc-MacOSX
 CND_ARTIFACT_NAME_Release=partybooth.elf
-CND_ARTIFACT_PATH_Release=dist/Release/AVR-GCC-Windows/partybooth.elf
-CND_PACKAGE_DIR_Release=dist/Release/AVR-GCC-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/avr-gcc-MacOSX/partybooth.elf
+CND_PACKAGE_DIR_Release=dist/Release/avr-gcc-MacOSX/package
 CND_PACKAGE_NAME_Release=partybooth.tar
-CND_PACKAGE_PATH_Release=dist/Release/AVR-GCC-Windows/package/partybooth.tar
+CND_PACKAGE_PATH_Release=dist/Release/avr-gcc-MacOSX/package/partybooth.tar
 #
 # include compiler specific variables
 #
