@@ -9,15 +9,12 @@ LDFLAGS	= -Wl,-Map=$(PROGRAM).map -Wl,--cref
 all:	$(PROGRAM).hex
 
 zipsrc:	clean
-	 
-
-$(PROGRAM):	all	
 	
 upload: all
 	sudo avrdude -c $(PROGRAMMER) -p $(DEVICE) -U flash:w:partybooth.hex
 	
 clean:
-	rm -f $(PROGRAM).hex $(PROGRAM).elf *.o $(PROGRAM).lst $(PROGRAM).map
+	rm -f *.hex *.elf *.o *.lst *.map
 
 %.hex: %.elf
 	avr-objcopy -j .text -j .data -O ihex $< $@
@@ -32,4 +29,4 @@ $(PROGRAM).elf: main.o
 disassemble:	$(PROGRAM).elf
 	avr-objdump -h -S $(PROGRAM).elf > $(PROGRAM).lst
 
-.PHONY :	all $(PROGRAM) flash fuse install clean disassemble zipsrc
+.PHONY :	all upload clean disassemble zipsrc
