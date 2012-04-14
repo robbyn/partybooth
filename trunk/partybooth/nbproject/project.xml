@@ -6,7 +6,7 @@
             <name>partybooth</name>
             <c-extensions/>
             <cpp-extensions>cpp</cpp-extensions>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
@@ -15,10 +15,6 @@
             <confList>
                 <confElem>
                     <name>Default</name>
-                    <type>0</type>
-                </confElem>
-                <confElem>
-                    <name>MyConf</name>
                     <type>0</type>
                 </confElem>
             </confList>
