@@ -14,7 +14,7 @@ upload: all
 	sudo avrdude -c $(PROGRAMMER) -p $(DEVICE) -U flash:w:partybooth.hex
 	
 clean:
-	rm -f *.hex *.elf *.o *.lst *.map
+	rm -f $(PROGRAM).hex $(PROGRAM).elf *.o $(PROGRAM).lst $(PROGRAM).map
 
 %.hex: %.elf
 	avr-objcopy -j .text -j .data -O ihex $< $@
