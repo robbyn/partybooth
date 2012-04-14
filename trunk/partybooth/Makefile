@@ -16,7 +16,7 @@ zipsrc:	clean
 $(PROGRAM):	all	
 	
 upload: all
-	avrdude -c $(PROGRAMMER) -P $(PORT) -p $(DEVICE) -U flash:w:$(PROGRAM).hex:i
+	sudo avrdude -c $(PROGRAMMER) -p $(DEVICE) -U flash:w:partybooth.hex
 	
 clean:
 	rm -f $(PROGRAM).hex $(PROGRAM).elf *.o $(PROGRAM).lst $(PROGRAM).map
