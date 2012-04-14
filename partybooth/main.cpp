@@ -1,3 +1,4 @@
+#include "common.h"
 #include <avr/io.h>
 #include <avr/sleep.h>
 

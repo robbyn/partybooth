@@ -6,8 +6,6 @@
       </df>
       <df name="eagle">
       </df>
-      <df name="src">
-      </df>
       <in>main.cpp</in>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -24,25 +22,6 @@
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Default" type="0">
-      <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>avr-gcc|GNU</compilerSet>
-      </toolsSet>
-      <makefileType>
-        <makeTool>
-          <buildCommandWorkingDir>.</buildCommandWorkingDir>
-          <buildCommand>${MAKE} -f Makefile</buildCommand>
-          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
-          <ccTool>
-            <preprocessorList>
-              <Elem>F_CPU=1200000UL</Elem>
-            </preprocessorList>
-          </ccTool>
-        </makeTool>
-      </makefileType>
-    </conf>
-    <conf name="MyConf" type="0">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>avr-gcc|GNU</compilerSet>
