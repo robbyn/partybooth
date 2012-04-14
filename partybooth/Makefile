@@ -1,14 +1,12 @@
 PROGRAM		= partybooth
 VERSION		= 1.2
 DEVICE		= attiny13
-CLOCK		= 120000
+CLOCK		= 1200000UL
 PROGRAMMER	= usbtiny
-PORT		= usb
 
 LDFLAGS	= -Wl,-Map=$(PROGRAM).map -Wl,--cref 
 
 all:	$(PROGRAM).hex
-	avr-size -C --mcu=$(DEVICE) $(PROGRAM).elf
 
 zipsrc:	clean
 	 
@@ -26,6 +24,7 @@ clean:
 
 $(PROGRAM).elf: main.o
 	avr-gcc -g -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE) -o $@ $< $(LDFLAGS)
+	avr-size -C --mcu=$(DEVICE) $(PROGRAM).elf
 
 %.o: %.cpp
 	avr-g++ -g -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE) -c $< -o $@
