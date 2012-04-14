@@ -34,16 +34,28 @@
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath></executablePath>
-          <cTool>
-            <preprocessorList>
-              <Elem>F_CPU=1200000UL</Elem>
-              <Elem>__AVR_ATtiny13__</Elem>
-            </preprocessorList>
-          </cTool>
           <ccTool>
             <preprocessorList>
               <Elem>F_CPU=1200000UL</Elem>
-              <Elem>__AVR_ATtiny13__</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+    </conf>
+    <conf name="MyConf" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>avr-gcc|GNU</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <ccTool>
+            <preprocessorList>
+              <Elem>F_CPU=1200000UL</Elem>
             </preprocessorList>
           </ccTool>
         </makeTool>
