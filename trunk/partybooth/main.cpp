@@ -6,9 +6,9 @@
 static const uint8_t LED = PB0;
 static const uint8_t BTN = PB1;
 
-static uint16_t counter = 0;
-
 ISR(TIM0_COMPA_vect) {
+    static uint16_t counter = 0;
+
     OCR0A ^= 1;
     if (++counter >= 4000) {
         counter = 0;
