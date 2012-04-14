@@ -11,6 +11,7 @@ static uint16_t counter = 0;
 ISR(TIM0_COMPA_vect) {
     OCR0A ^= 1;
     if (++counter >= 4000) {
+        counter = 0;
         // every second, toggle LED
         PORTB ^= ~(1 << LED);
     }
