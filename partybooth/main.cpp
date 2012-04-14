@@ -5,19 +5,28 @@
 
 static const uint8_t LED = PB0;
 static const uint8_t BTN = PB1;
+static const uint8_t BZZ = PB2;
 
 ISR(TIM0_COMPA_vect) {
+    static bool ledOn = false;
     static uint16_t counter = 0;
 
     OCR0A ^= 1;
     if (++counter >= 4000) {
         counter = 0;
         // every second, toggle LED
-        PORTB ^= ~(1 << LED);
+        ledOn = !ledOn;
+        if (ledOn) {
+            PORTB |= 1 << LED;
+        } else {
+            PORTB &= ~(1 << LED);
+        }
     }
 }
 
 int main() {
+    DDRB |= (1 << LED) | (1 << BZZ); // LED output
+    PORTB &= ~(1 << LED);
     TCCR0B = 2; // top = OCRA
     TCCR0B = 2; // clk/8 prescale
     OCR0A = 37;
@@ -25,6 +34,6 @@ int main() {
     TIMSK0 = 4; // Enable interrupt for compare match A
     sei();
     while (true) {
-        sleep_mode();
+//        sleep_mode();
     }
 }
