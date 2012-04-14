@@ -2,10 +2,25 @@
 <configurationDescriptor version="80">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df name="partybooth" root=".">
+      <df name="build">
+        <df name="Debug">
+          <df name="Arduino-Linux-x86">
+            <df name="src">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="dist">
+        <df name="Debug">
+          <df name="Arduino-Linux-x86">
+          </df>
+        </df>
+      </df>
       <df name="doc">
       </df>
       <df name="eagle">
       </df>
+      <in>common.h</in>
       <in>main.cpp</in>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -34,7 +49,7 @@
           <executablePath></executablePath>
           <ccTool>
             <preprocessorList>
-              <Elem>F_CPU=1200000UL</Elem>
+              <Elem>F_CPU=120000</Elem>
             </preprocessorList>
           </ccTool>
         </makeTool>
