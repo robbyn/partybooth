@@ -7,7 +7,6 @@ static const uint8_t LED = PB0;
 static const uint8_t BTN = PB1;
 static const uint8_t BZZ = PB2;
 static const uint8_t SHT = PB3;
-static const uint8_t FOC = PB4;
 
 static uint8_t state = 0;
 static uint16_t counter = 0;
@@ -43,7 +42,7 @@ ISR(TIM0_COMPA_vect) {
                 counter = 0;
                 ++state;
                 PORTB &= ~((1 << LED) | (1 << BZZ));
-                PORTB |= (1 << SHT) | (1 << FOC);
+                PORTB |= 1 << SHT;
             } else {
                 PORTB ^= 1 << BZZ;
             }
@@ -52,7 +51,7 @@ ISR(TIM0_COMPA_vect) {
             if (counter >= 800) {
                 counter = 0;
                 state = 0;
-                PORTB &= ~((1 << SHT) | (1 << FOC));
+                PORTB &= ~(1 << SHT);
             }
             break;
     }
@@ -61,7 +60,7 @@ ISR(TIM0_COMPA_vect) {
 ISR(INT0_vect) {
     counter = 0;
     state = 1;
-    PORTB &= ~((1 << SHT) | (1 << FOC));
+    PORTB &= ~(1 << SHT);
     PORTB |= 1 << LED;
 }
 
