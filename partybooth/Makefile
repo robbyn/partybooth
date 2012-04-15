@@ -8,7 +8,10 @@ LDFLAGS	= -Wl,-Map=$(PROGRAM).map -Wl,--cref
 
 all:	$(PROGRAM).hex
 
-zipsrc:	clean
+zipsrc:
+	zip -r -b /tmp partybooth-$(VERSION).zip * -x '*.zip' -x '*.o'\
+	    -x '*.hex' -x '*.elf' -x '*.lst' -x '*.map' -x out.txt \
+	    -x '*/.svn/*' -x 'nbproject/private/*'
 	
 upload: all
 	sudo avrdude -c $(PROGRAMMER) -p $(DEVICE) -U flash:w:partybooth.hex
