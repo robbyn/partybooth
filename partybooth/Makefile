@@ -9,7 +9,7 @@ LDFLAGS	= -Wl,-Map=$(PROGRAM).map -Wl,--cref
 all:	$(PROGRAM).hex
 
 zipsrc:
-	zip -r -b /tmp partybooth-$(VERSION).zip * -x '*.zip' -x '*.o'\
+	zip -r -b /tmp partybooth-$(VERSION)-src.zip * -x '*.zip' -x '*.o'\
 	    -x '*.hex' -x '*.elf' -x '*.lst' -x '*.map' -x out.txt \
 	    -x '*/.svn/*' -x 'nbproject/private/*'
 	
