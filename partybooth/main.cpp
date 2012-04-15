@@ -66,7 +66,7 @@ ISR(INT0_vect) {
 }
 
 int main() {
-    DDRB |= (1 << LED) | (1 << BZZ) | (1 << BZZ); // LED, BZZ, SHT output
+    DDRB |= (1 << LED) | (1 << BZZ) | (1 << SHT); // LED, BZZ, SHT output
     // Setup timer 0 for a frequency of 4kHz
     TCCR0A = 2; // top = OCRA
     TCCR0B = 2; // /8 prescale in addition to the /8 system clock prescale
