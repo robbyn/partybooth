@@ -19,7 +19,7 @@ ISR(TIM0_COMPA_vect) {
         case 4:
         case 6:
         case 8:
-            if (counter >= 3200) {
+            if (counter >= 3200) { // 3200 tics = 800ms
                 counter = 0;
                 ++state;
                 PORTB |= 1 << LED;
@@ -29,7 +29,7 @@ ISR(TIM0_COMPA_vect) {
         case 3:
         case 5:
         case 7:
-            if (counter >= 800) {
+            if (counter >= 800) { // 800 tics = 200ms
                 counter = 0;
                 ++state;
                 PORTB &= ~((1 << LED) | (1 << BZZ));
@@ -38,7 +38,7 @@ ISR(TIM0_COMPA_vect) {
             }
             break;
         case 9:
-            if (counter >= 4000) {
+            if (counter >= 4000) { // 4000 tics = 1s
                 counter = 0;
                 ++state;
                 PORTB &= ~((1 << LED) | (1 << BZZ));
@@ -48,7 +48,7 @@ ISR(TIM0_COMPA_vect) {
             }
             break;
         case 10:
-            if (counter >= 800) {
+            if (counter >= 800) { // 800 tics = 200ms
                 counter = 0;
                 state = 0;
                 PORTB &= ~(1 << SHT);
@@ -75,6 +75,8 @@ int main() {
     // Setup BTN interrupt
     MCUCR |= 3; // interrupt on the rising edge
     GIMSK |= 1 << INT0; // enable interrupt from INT0
+    // Now enable the interrupts, then go to sleep and let the interrupt
+    // handlers do the rest
     sei();
     while (true) {
         sleep_mode();
