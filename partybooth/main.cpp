@@ -48,7 +48,7 @@ ISR(TIM0_COMPA_vect) {
             }
             break;
         case 10:
-            if (counter >= 800) { // 800 tics = 200ms
+            if (counter >= 2000) {
                 counter = 0;
                 state = 0;
                 PORTB &= ~(1 << SHT);
