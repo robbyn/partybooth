@@ -72,9 +72,11 @@ int main() {
     OCR0A = 37; // alternate between 36 and 37 (the correct count is 36.5)
     TCNT0 = 0;
     TIMSK0 = 4; // Enable interrupt for compare match A
+
     // Setup BTN interrupt
     MCUCR |= 3; // interrupt on the rising edge
     GIMSK |= 1 << INT0; // enable interrupt from INT0
+
     // Now enable the interrupts, then go to sleep and let the interrupt
     // handlers do the rest
     sei();
