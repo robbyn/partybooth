@@ -13713,8 +13713,8 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <part name="X1" library="con-lumberg" deviceset="1501_0*" device="6"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="IC2" library="linear" deviceset="78*" device="Z" technology="L05"/>
-<part name="C2" library="rcl" deviceset="CPOL-EU" device="E5-6" value="0.33u"/>
-<part name="C3" library="rcl" deviceset="CPOL-EU" device="E5-5" value="0.1u"/>
+<part name="C2" library="rcl" deviceset="CPOL-EU" device="E5-6" value="100u"/>
+<part name="C3" library="rcl" deviceset="CPOL-EU" device="E5-5" value="10u"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
