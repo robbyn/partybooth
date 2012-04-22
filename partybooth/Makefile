@@ -1,5 +1,5 @@
 PROGRAM		= partybooth
-VERSION		= 1.2
+VERSION		= 1.3
 DEVICE		= attiny13
 CLOCK		= 1200000UL
 PROGRAMMER	= usbtiny
